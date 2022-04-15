@@ -28,7 +28,13 @@ def test_binary_search_recursive_unsortedlist_throws_exception():
     unsorted_problem_space = [-1, 200, 88, 303, 10, 2000]
 
     with pytest.raises(ValueError):
-        assert binary_search_recursive(unsorted_problem_space, -1, 0, len(unsorted_problem_space)) == False
+        assert (
+            binary_search_recursive(
+                unsorted_problem_space, -1, 0, len(unsorted_problem_space)
+            )
+            == False
+        )
+
 
 def test_binary_search_iterative_contains_target_left_side():
     assert binary_search_iterative(problem_space, 5) == True

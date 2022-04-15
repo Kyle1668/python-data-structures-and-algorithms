@@ -1,4 +1,6 @@
-def binary_search_recursive(numbers: list[int], target: int, lower: int, upper: int) -> bool:
+def binary_search_recursive(
+    numbers: list[int], target: int, lower: int, upper: int
+) -> bool:
     """Returns a boolean indicating whether a number is present in the given list
 
     Args:
@@ -59,9 +61,8 @@ def binary_search_iterative(numbers: list[int], target: int) -> bool:
         if numbers[pivot_index] < target:
             lower_index = pivot_index + 1
             continue
-        
-        upper_index = pivot_index - 1
 
+        upper_index = pivot_index - 1
 
     return False
 
